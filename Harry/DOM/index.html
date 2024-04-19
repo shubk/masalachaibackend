@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div>
+        <button class="btn" id="btn1"> Click Me</button>
+        <button class="btn" id="btn2"> CLICK Me</button>
+    </div>
+    <script>
+
+
+        const myButton = document.getElementById('btn1')
+        //2. we will use ddactionlistener 
+        // bca we want to execute two tatsks in the same 
+        // in the foll 'click' is the first 
+        // second is the callback function
+        myButton.addEventListener('click', () => {
+            console.log("Task 1 : Shubhada ")
+        })
+        myButton.addEventListener('mouseenter', e => {
+            console.log('Mouse Enter ')
+        })
+        myButton.addEventListener('mouseleave', e => {
+            console.log('Mouse Left')
+        })
+        // myButton.onclick = function () {
+        //     console.log('I m clicked ')
+        // }
+
+        // const el = document.querySelectorAll('btn1');
+        // console.log(el)
+        // // console.log(myButton)
+        // myButton.innerText = 'Shubhada Katke'
+        // myButton.style.color = 'red'
+
+        // myButton.onclick = function () {
+        // alert('Button Clicked ')
+        // myButton.style.backgroundColor = 'red';
+        // }
+
+        const buttons = document.getElementsByClassName('btn')
+
+        for (let i = 0; i < buttons.length; i++) {
+            console.log(buttons.item(i))
+        }
+    </script>
+</body>
+
+</html>
